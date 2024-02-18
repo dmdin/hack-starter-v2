@@ -8,5 +8,5 @@ import {DB} from '$env/static/private'
 
 // for query purposes
 const queryClient = postgres(DB);
-const db = drizzle(queryClient);
+export const db = drizzle(queryClient);
 

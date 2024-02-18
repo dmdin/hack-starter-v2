@@ -10,4 +10,3 @@ import {DB} from '$env/static/private'
 const queryClient = postgres(DB);
 const db = drizzle(queryClient);
 
-+

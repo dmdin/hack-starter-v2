@@ -12,7 +12,16 @@ const config = {
 		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
 		adapter: adapter(),
 		alias: {
-			$module: 'src/routes/test'
+			$root: 'src',
+			$schema: 'src/schema',
+			$server: 'src/lib/server',
+			$repo: 'src/lib/server/repo',
+			$stores: 'src/lib/stores',
+
+			$auth: 'src/routes/auth',
+			$user: 'src/routes/user',
+
+			$module: 'src/routes/test',
 		}
 	}
 };

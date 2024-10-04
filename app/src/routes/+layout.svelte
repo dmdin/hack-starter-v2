@@ -1,4 +1,22 @@
 <script>
+  import { onMount } from 'svelte';
+	import { scale, fly } from 'svelte/transition';
+	import { fade } from 'svelte/transition';
+	import { page } from '$app/stores';
+	import { signIn, signOut } from '@auth/sveltekit/client';
+
+	import Github from '~icons/devicon/github';
+	import Google from '~icons/flat-color-icons/google';
+	import Cancel from '~icons/iconoir/cancel';
+	import Enter from '~icons/iconamoon/enter';
+	import Exit from '~icons/iconamoon/exit';
+	import Moon from '~icons/ph/moon';
+	import Sun from '~icons/ph/sun';
+	import Robot from '~icons/mdi/robot-outline';
+	import Plus from '~icons/ic/round-plus';
+
+	import { SignIn } from "@auth/sveltekit/components"
+
   import "../app.css";
 </script>
 
@@ -26,9 +44,11 @@
   </div>
 
 </header>
-<main class="grow h-full @container/main flex flex-col">
-  <slot />
-</main>
+{#key $page}
+  <main in:fade class="grow h-full @container/main flex flex-col">
+    <slot />
+  </main>
+{/key}
 
 <footer class="footer items-center p-4 bg-neutral text-neutral-content">
   <aside class="items-center grid-flow-col">

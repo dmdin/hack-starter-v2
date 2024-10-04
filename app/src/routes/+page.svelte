@@ -1,5 +1,4 @@
 <script>
-  import Test from "$module/ui/Test.svelte";
 </script>
 
 <section class="grow w-full flex flex-col items-center justify-center mb-40">
